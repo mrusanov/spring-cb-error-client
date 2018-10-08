@@ -1,0 +1,19 @@
+spring.application.name: error-client
+server.port: 8092
+
+#read timeout for the RestTemplate
+client.server.readTimeoutInMilliseconds: ${CLIENT_SERVER_READ_TIMEOUT_MILLIS}
+server.url: http://192.168.99.100:8090
+server.errorEndpoint: /server/error/
+
+hystrix.command.default.execution.timeout.enabled: ${HYSTRIX_TIMEOUT_ENABLED}
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: ${HYSTRIX_TIMEOUT_MILLIS}
+
+hystrix.command.default.circuitBreaker.requestVolumeThreshold: ${HYSTRIX_REQUEST_VOLUME_THRESHOLD}
+hystrix.command.default.circuitBreaker.sleepWindowInMilliseconds: ${HYSTRIX_SLEEP_WINDOW_MILLIS}
+hystrix.command.default.circuitBreaker.errorThresholdPercentage: ${HYSTRIX_ERROR_THRESHOLD_PERCENTAGE}
+
+#spring.rabbitmq.host: 192.168.99.100
+#spring.rabbitmq.port: 5672
+#spring.rabbitmq.username: guest
+#spring.rabbitmq.password: guest

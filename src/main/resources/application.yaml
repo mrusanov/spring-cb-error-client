@@ -3,7 +3,7 @@ server.port: 8092
 
 #read timeout for the RestTemplate
 client.server.readTimeoutInMilliseconds: ${CLIENT_SERVER_READ_TIMEOUT_MILLIS}
-server.url: http://192.168.99.100:8090
+server.url: ${SERVER_URL}
 server.errorEndpoint: /server/error/
 
 hystrix.command.default.execution.timeout.enabled: ${HYSTRIX_TIMEOUT_ENABLED}
